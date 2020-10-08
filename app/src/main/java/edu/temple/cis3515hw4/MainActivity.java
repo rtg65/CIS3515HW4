@@ -2,18 +2,14 @@ package edu.temple.cis3515hw4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-public class PaletteActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +25,7 @@ public class PaletteActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(!onStart) {
                     TextView text = (TextView) view;
-                    Intent colorIntent = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    Intent colorIntent = new Intent(MainActivity.this, CanvasActivity.class);
                     colorIntent.putExtra("color", text.getText());
                     startActivity(colorIntent);
                 }
