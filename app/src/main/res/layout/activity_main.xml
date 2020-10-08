@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".PaletteActivity">
 
-    <Spinner
-        android:id="@+id/spinner"
+    <GridView
+        android:id="@+id/gridview"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
