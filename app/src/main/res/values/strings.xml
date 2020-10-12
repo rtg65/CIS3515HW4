@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">CIS3515HW4</string>
+    <string name="app_name">Palette Activity</string>
+    <string name="intro_text">Click a color below to launch the Canvas</string>
+    <string-array name="colors">
+        <item>White</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Fuchsia</item>
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Gray</item>
+        <item>Cyan</item>
+        <item>Olive</item>
+        <item>Silver</item>
+        <item>Magenta</item>
+    </string-array>
 </resources>
