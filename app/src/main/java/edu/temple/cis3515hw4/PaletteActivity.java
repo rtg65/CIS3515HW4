@@ -3,6 +3,7 @@ package edu.temple.cis3515hw4;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,15 +11,15 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class PaletteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_palette);
         final GridView grid = findViewById(R.id.gridview);
         grid.setNumColumns(3);
-        String[] colors = {"White", "Red", "Blue", "Green","Fuchsia", "Yellow", "Purple", "Gray", "Cyan", "Olive", "Silver","Magenta"};
+        String[] colors = getResources().getStringArray(R.array.colors);
 
         grid.setAdapter(new ColorAdapter(this, colors.length,colors));
 
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
                     TextView text = (TextView) view;
                 Log.d("what tho", "onItemClick: "+text.getText());
-                    Intent colorIntent = new Intent(MainActivity.this, CanvasActivity.class);
+                    Intent colorIntent = new Intent(PaletteActivity.this, CanvasActivity.class);
                     colorIntent.putExtra("color", text.getText());
                     startActivity(colorIntent);
 
