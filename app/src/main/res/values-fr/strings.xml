@@ -1,18 +1,18 @@
 <resources>
-    <string name="app_name">Palette Activity</string>
-    <string name="intro_text">Click a color below to launch the Canvas</string>
+    <string name="app_name">Activité de palette</string>
+    <string name="intro_text">Cliquez sur une couleur ci-dessous pour lancer la toile</string>
     <string-array name="colors">
-        <item>White</item>
-        <item>Red</item>
-        <item>Blue</item>
-        <item>Green</item>
+        <item>Blanc</item>
+        <item>Rouge</item>
+        <item>Bleu</item>
+        <item>Vert</item>
         <item>Fuchsia</item>
-        <item>Yellow</item>
-        <item>Purple</item>
-        <item>Gray</item>
+        <item>Jaune</item>
+        <item>Violet</item>
+        <item>Gris</item>
         <item>Cyan</item>
         <item>Olive</item>
-        <item>Silver</item>
+        <item>Argent</item>
         <item>Magenta</item>
     </string-array>
     <string-array name="colors_values">
