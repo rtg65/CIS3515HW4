@@ -17,11 +17,12 @@ public class CanvasActivity extends AppCompatActivity {
 
         // Retrieve stored color value
         String color = getIntent().getStringExtra("color");
+        String color_value = getIntent().getStringExtra("color_value");
 
         // Change text value
         ((TextView) findViewById(R.id.colorText)).setText(color);
 
         // Change layout background color
-        findViewById(R.id.layout).setBackgroundColor(Color.parseColor(color));
+        findViewById(R.id.layout).setBackgroundColor(Color.parseColor(color_value));
     }
 }

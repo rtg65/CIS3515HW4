@@ -29,9 +29,9 @@ public class PaletteActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                     TextView text = (TextView) view;
-                Log.d("what tho", "onItemClick: "+text.getText());
                     Intent colorIntent = new Intent(PaletteActivity.this, CanvasActivity.class);
                     colorIntent.putExtra("color", text.getText());
+                    colorIntent.putExtra("color_value", getResources().getStringArray(R.array.colors_values)[position]);
                     startActivity(colorIntent);
 
             }

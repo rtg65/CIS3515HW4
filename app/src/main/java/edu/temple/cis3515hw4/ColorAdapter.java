@@ -49,7 +49,7 @@ public class ColorAdapter extends BaseAdapter{
 
         textView.setText(colors[position]);
         textView.setPadding(50,50,5,50);
-        textView.setBackgroundColor(Color.parseColor(colors[position]));
+        textView.setBackgroundColor(Color.parseColor(parent.getContext().getResources().getStringArray(R.array.colors_values)[position]));
 
         return textView;
     }
