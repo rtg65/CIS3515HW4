@@ -14,11 +14,14 @@ public class CanvasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_canvas);
-        Intent colorIntent = getIntent();
-        String color = colorIntent.getStringExtra("color");
-        View layout = findViewById(R.id.layout);
-        layout.setBackgroundColor(Color.parseColor(color));
-        TextView text = findViewById((R.id.colorText));
-        text.setText(color);
+
+        // Retrieve stored color value
+        String color = getIntent().getStringExtra("color");
+
+        // Change text value
+        ((TextView) findViewById(R.id.colorText)).setText(color);
+
+        // Change layout background color
+        findViewById(R.id.layout).setBackgroundColor(Color.parseColor(color));
     }
 }
