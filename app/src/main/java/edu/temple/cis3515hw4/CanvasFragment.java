@@ -60,14 +60,12 @@ public class CanvasFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        // Retrieve stored color value
+        View v = inflater.inflate(R.layout.fragment_canvas, container, false);
 
-        // Change text value
-        ((TextView) container.findViewById(R.id.colorText)).setText(fColor);
+        TextView text = v.findViewById(R.id.colorText);
 
-        // Change layout background color
-        container.findViewById(R.id.layout).setBackgroundColor(Color.parseColor(fColorValue));
-        return inflater.inflate(R.layout.fragment_canvas, container, false);
+        text.setText(fColor);
+        text.setBackgroundColor(Color.parseColor("WHITE"));
+        return v;
     }
 }
